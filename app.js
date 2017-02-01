@@ -8,8 +8,8 @@
   ctrl1_fn.$inject = ['ShoppingListCheckOffService'];
   function ctrl1_fn(ShoppingListCheckOffService){
       var ToBuyController = this;
-      ToBuyController.move = function (item, pos) {
-        ShoppingListCheckOffService.move(item, pos);
+      ToBuyController.move = function (pos) {
+        ShoppingListCheckOffService.move(pos);
       };
       ToBuyController.items = ShoppingListCheckOffService.getToBuyItems();
   };
@@ -52,8 +52,8 @@
     svc.getBoughtItems = function (){
       return boughtItems;
     };
-    svc.move = function (item, pos){
-      boughtItems.push(item);
+    svc.move = function (pos){
+      boughtItems.push(toBuyItems[pos]);
       toBuyItems.splice(pos,1);
     };
   };

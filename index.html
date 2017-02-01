@@ -36,7 +36,7 @@
      <ul>
        <li ng-repeat = "i in ToBuyController.items">
          Buy {{i.qty}} {{i.name}}
-         <button ng-click = "ToBuyController.move(i, $index)" class="btn btn-default">
+         <button ng-click = "ToBuyController.move($index)" class="btn btn-default">
            <span class="glyphicon glyphicon-ok"></span> Bought
          </button>
        </li>
