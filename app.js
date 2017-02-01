@@ -39,6 +39,10 @@
       {
         name: "Chocolate",
         qty: "5"
+      },
+      {
+        name: "Bread",
+        qty: "1"
       }
     ];
     var boughtItems = [];
